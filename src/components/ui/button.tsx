@@ -8,9 +8,10 @@ interface ButtonProps {
     onClick?: () => void;
     href?: string; // Link to another page
     type?: 'submit' | 'button'; // Type of the button
+    className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, color = 'dark', onClick, href, type = 'button' }) => {
+const Button: React.FC<ButtonProps> = ({ text, color = 'dark', onClick, href, type = 'button', className }) => {
     const [isHovered, setIsHovered] = React.useState(false);
 
     const handleMouseEnter = () => {
@@ -22,15 +23,15 @@ const Button: React.FC<ButtonProps> = ({ text, color = 'dark', onClick, href, ty
     };
 
     const colorClasses = color === 'dark'
-        ? 'bg-custom-pink text-custom-black hover:bg-custom-gray' // dark theme
-        : 'bg-custom-gray text-custom-black hover:bg-custom-pink'; // light theme
+        ? 'bg-custom-button-pink text-custom-black hover:bg-custom-button-hover' // dark theme
+        : 'bg-custom-gray text-custom-black hover:bg-custom-button-pink'; // light theme
 
     if (href) {
 
         return (
             <Link href={href} passHref>
             <button
-                className={`${colorClasses} flex items-center justify-center rounded-full h-10 w-30 border-none px-2.5 cursor-pointer transition-colors duration-300`} 
+                className={`${colorClasses} ${className} flex items-center justify-center rounded-2xl h-10 min-w-30 border-none px-3 text-xl cursor-pointer transition-colors duration-300`} 
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}

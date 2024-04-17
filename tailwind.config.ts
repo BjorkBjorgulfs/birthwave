@@ -15,6 +15,8 @@ const config: Config = {
       "custom-gray": "#EFEFEF",
       "custom-yellow": "#DED5B5",
       "custom-button-light": "#F5F5F5",
+      "custom-button-hover": "#E0E0E0",
+      "custom-button-pink": "#C49D9D80",
     },
     extend: {
       backgroundImage: {

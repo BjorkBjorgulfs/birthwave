@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <footer className="flex justify-between items-center bg-custom-footer h-[160px] px-10">
             <div>
-                <Image src="/logoDark.svg" alt="Logo" width={77} height={88} />
+                <Image src="/logoDark.svg" alt="Logo" width={77} height={88}/>
             </div>
             <section className="flex flex-col space-y-4">
                 <div className='flex gap-4'>
