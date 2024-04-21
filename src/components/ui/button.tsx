@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({ text, color = 'dark', onClick, href, ty
         return (
             <Link href={href} passHref>
             <button
-                className={`${colorClasses} ${className} flex items-center justify-center rounded-2xl h-10 min-w-30 border-none px-3 text-xl cursor-pointer transition-colors duration-300`} 
+                className={`${colorClasses} ${className} flex items-center justify-center rounded-2xl h-10 min-w-32 border-none px-9 text-xl cursor-pointer transition-colors duration-300`} 
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}
@@ -43,7 +43,7 @@ const Button: React.FC<ButtonProps> = ({ text, color = 'dark', onClick, href, ty
     } else {
         return (
             <button
-                className={`${colorClasses} flex items-center justify-center rounded-full h-10 w-30 border-none px-2.5 cursor-pointer transition-colors duration-300`} 
+                className={`${colorClasses} ${className} flex items-center justify-center rounded-2xl h-10 min-w-32 border-none px-2.5 cursor-pointer transition-colors duration-300`} 
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}
