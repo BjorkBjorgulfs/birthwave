@@ -1,6 +1,6 @@
+// this is the layout for the whole page, it has the navbar and footer components and the children component
 import type { Metadata } from "next";
 import { Nokora } from "next/font/google";
-import { Zeyada } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";

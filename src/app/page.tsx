@@ -1,3 +1,5 @@
+// This is the main page component, it has one client component child, the Button component
+// Later I would connect all the text boxes to the database and make the admin of the page able to change the text
 import Image from "next/image";
 import Button from "@/components/ui/button";
 

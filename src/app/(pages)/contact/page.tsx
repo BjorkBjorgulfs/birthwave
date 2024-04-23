@@ -1,3 +1,4 @@
+// This is the contact page, it has one client component child, the ContactForm component
 import Image from "next/image";
 import ContactForm from "@/components/form/contactForm";
 
@@ -5,7 +6,7 @@ export default function ContactPage () {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between">
             <div className="w-full h-[600px] relative overflow-hidden">
-            <Image src="/womanWithDoula.jpg" alt="Pregnant Woman With Doula" layout="fill" objectFit="cover" objectPosition="center 85%"  sizes= 'width: "auto"'/>
+                <Image src="/womanWithDoula.jpg" alt="Pregnant Woman With Doula" layout="fill" objectFit="cover" objectPosition="center 85%"  sizes= 'width: "auto"'/>
             </div>
             <div className="flex h-screen items-center justify-center">
                 <div className="flex">

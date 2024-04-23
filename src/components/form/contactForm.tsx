@@ -1,4 +1,5 @@
 'use client';
+//This form is a client component because it uses the useState hook
 import React, { useState } from 'react';
 import { Input, Textarea } from '@nextui-org/input';
 import Button from '../ui/button';
@@ -8,12 +9,13 @@ const ContactForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    // Function to handle form submission
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the default form submission
 
-        // Send email or message to the admin using Supabase or any other service
+        // I will need to add a function to send email or message to the admin using Supabase
 
-        // Reset form fields
+        // Reset form fields after submission
         setName('');
         setEmail('');
         setMessage('');

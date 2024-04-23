@@ -1,3 +1,6 @@
+// here I was just checking if I could fetch data from the database and display it on the page
+// I was trying to fetch without using useEffect, because that would make it a client component
+// so I'm importing the fetch function from lib/data and calling it directly in the component
 import fetchUsers from '../../../lib/data';
 
 export default async function About() {
@@ -17,7 +20,7 @@ export default async function About() {
     return (
         <div>
             <div>
-                <h1>here should be users {users[0]?.username}</h1> {/* Access the id property of the first user */}
+                <h1>here should be users {users[0]?.username}</h1> {/* Access the username property of the first user */}
             </div>
         </div>
     )

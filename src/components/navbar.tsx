@@ -1,6 +1,7 @@
+//This is a basic navbar with logo and links
 import Image from 'next/image';
 import Link from 'next/link';
-import NavLink from './client/navLinks';
+import NavLink from './ui/navLinks'; // Importing the NavLink component, which is a client component because it uses the usePathname hook
 
 export const Navbar = () => {
    
