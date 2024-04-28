@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 // Fetch users from Supabase
-export default async function fetchUsers() {
+export async function fetchUsers() {
     try {
         const users = await prisma.user.findMany();
         if (!users) {
@@ -16,3 +16,15 @@ export default async function fetchUsers() {
     };
 };
 
+export async function fetchAboutMe() {
+    try {
+        const aboutMeData = await prisma.aboutMe.findMany();
+        if (!aboutMeData) {
+            return null;
+        }
+        return aboutMeData;
+    } catch (error) {
+        console.error('Error fetching about me:', error);
+        throw new Error ('Failed to fetch about me');
+    };
+};
