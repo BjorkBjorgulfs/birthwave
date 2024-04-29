@@ -10,26 +10,34 @@ import { useEffect, useState } from "react";
 import Image from 'next/image';
 
 export default function Page() {
-    const [aboutData, setAboutData] = useState<AboutMe[] | null>(null);
+    const [aboutData, setAboutData] = useState<AboutMe[] | null>(null); //useState to store the data
 
+    //useEffect to fetch the data
     useEffect(() => {
-        async function getAboutMe() {
+        //async function to fetch the data
+        async function getAboutMe() { 
             try {
+                //fetching the data from the api route
                 const response = await fetch('../api/about');
-
+                //checking if the response is ok
                 if (!response.ok) {
                     console.error('Error fetching about me data:', response.statusText);
                     throw new Error('Failed to fetch about me');
                 }
+                //converting the response to json
                 const data = await response.json();
+                //setting the data to the state
                 setAboutData(data);
+                //catching any errors
             } catch (error) {
                 console.error('Error fetching about me:', error);
             }
         }
+        //calling the function
         getAboutMe();
     }, []);
 
+    //if there is no data found
     if (!aboutData || aboutData.length === 0) {
         return <div>No data found</div>
     };

@@ -9,8 +9,10 @@ import { AboutMe } from '@prisma/client';
 import Image from 'next/image';
 
 export default async function Page() {
-    const about: AboutMe[] | null = await fetchAboutMe();
+    //fetching the data from the lib/data, not using useEffect or useState so the page remains a server component
+    const about: AboutMe[] | null = await fetchAboutMe(); 
       
+    // if there is no data found then return a message
     if (!about || about.length === 0) {
         return <div>No data found</div>
     };

@@ -16,13 +16,17 @@ export async function fetchUsers() {
     };
 };
 
+// fetch "about me" data from Supabase
+// this fetch function will be used in the server component
 export async function fetchAboutMe() {
     try {
-        const aboutMeData = await prisma.aboutMe.findMany();
-        if (!aboutMeData) {
-            return null;
+        const aboutMeData = await prisma.aboutMe.findMany(); //"aboutMe" is the name of the table in the database
+        if (!aboutMeData) { 
+            return null; //if there is no data found then return null
         }
+        // return the data
         return aboutMeData;
+        //catch any errors
     } catch (error) {
         console.error('Error fetching about me:', error);
         throw new Error ('Failed to fetch about me');
