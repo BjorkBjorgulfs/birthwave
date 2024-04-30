@@ -6,4 +6,4 @@ After researching I made a simple website using Next.js, Typescript, Tailwind, S
 
 the project is not at all ready, the home page and contact page are working.
 
-LIVE LINK https://birthwave-1q4s-lotnplmop-bjs-projects-78c8abe2.vercel.app/
+LIVE LINK https://birthwave-qnroieigm-bjs-projects-78c8abe2.vercel.app/
