@@ -13,10 +13,12 @@ export default function Home() {
         <div className="relative h-3/4">
           <div className="w-[250px] h-[250px] bg-custom-pink rounded-full overflow-hidden"></div>
         </div>
-        <div className="relative w-[700px] h-3/4 bg-custom-pink rounded-2xl p-12 overflow-hidden">
-          <p className="text-lg leading-8 overflow-ellipsis">I'm Guðný Rós, birth and postnatal doula working in Iceland. I live in Reykjavík with my wife and two young children.
-            I am extremely passionate about helping parents have a positive and empowering experiences through birth. My strong belief is that every person giving birth has the right to make their own choices and be listened to, heard and held. The transition of bringing your baby into the world is such a significant and sacred one, and I will help you honor that, whether your birth is at home, in a birth center or in hospital.
-            <br></br>As your doula, I am here to provide you with information, practical support during the birth and postpartum period, advocate for you if needed and, most importantly, provide calm, compassionate and consistent emotional support.</p>
+        <div className="relative w-[700px] h-3/4 bg-custom-pink rounded-2xl p-12 overflow-auto items-center justify-center">
+          <div className="relative h-[90%] w-[90%] overflow-auto">
+            <p className="text-lg leading-8">I'm Guðný Rós, birth and postnatal doula working in Iceland. I live in Reykjavík with my wife and two young children.
+              I am extremely passionate about helping parents have a positive and empowering experiences through birth. My strong belief is that every person giving birth has the right to make their own choices and be listened to, heard and held. The transition of bringing your baby into the world is such a significant and sacred one, and I will help you honor that, whether your birth is at home, in a birth center or in hospital.
+              <br></br>As your doula, I am here to provide you with information, practical support during the birth and postpartum period, advocate for you if needed and, most importantly, provide calm, compassionate and consistent emotional support.</p>
+          </div>
           <Button className="absolute bottom-8 right-12" color="light" text="Read more" href="/about" type="button"/>
         </div>
       </div>
